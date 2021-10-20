@@ -6,6 +6,12 @@ Code for server side deployment of Artion Marketplace.
 npm install 
 ```
 
+## Launch docker environment
+```console
+cd docker
+docker-compose up -d
+```
+
 ## Compile
 ```
 npm run start / npm run dev (nodemon)
