@@ -23,7 +23,8 @@ const validateSignature = require('../apis/middleware/auth.sign');
 const MarketplaceContractABI = require('../constants/marketplaceabi');
 const MarketplaceContractAddress = process.env.MARKETPLACE_ADDRESS;
 
-const ftmScanApiKey = process.env.FTM_SCAN_API_KEY;
+const ftmScanApiKey = process.env.EXPLORER_API_KEY;
+const explorerBaseUrl = (process.env.EXPLORER_URL || '').replace(/\/$/, '');
 
 const Logger = require('../services/logger');
 const { getSymbol } = require('../services/price.feed');
@@ -500,7 +501,7 @@ router.post('/isValidated', auth, async (req, res) => {
         data: 'NFT Contract Address Invalid'
       });
     erc721Address = toLowerCase(erc721Address);
-    let request = `https://api.ftmscan.com/api?module=contract&action=getsourcecode&address=${erc721Address}&apikey=${ftmScanApiKey}`;
+    let request = `${explorerBaseUrl}/api?module=contract&action=getsourcecode&address=${erc721Address}&apikey=${ftmScanApiKey}`;
     let response = await axios.get(request);
     if (
       response.status != '1' ||
