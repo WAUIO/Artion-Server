@@ -25,4 +25,5 @@ router.use("/payToken", require("./paytoken"));
 router.use("/mail", require("./mail"));
 router.use("/unlockable", require("./unlockable"));
 router.use("/transfer", require("./transfertracker"));
+router.use("/thumbnails", require("./thumbnails"));
 module.exports = router;
