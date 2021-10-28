@@ -20,7 +20,7 @@ router.get("/mailTest", async (req, res) => {
             title: "Jason Test",
             content:
               "I am testing email template please let me know if you like this.",
-            image: "https://storage.artion.io/image/1629994367734.png",
+            image: process.env.STORAGE_URL + "1629994367734.png",
             name: "From Ethereum to Fantom",
             link: "https://artion.io/explore/0x7f6a67065fa3d2e42383a27f1a7537c2ab88318b/4",
           },

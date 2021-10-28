@@ -6,9 +6,9 @@ const sgMail = require("@sendgrid/mail");
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const app_url = process.env.APP_URL;
-const storage_url = process.env.RUNTIME
-  ? "https://storage.testnet.artion.io/image/"
-  : "https://storage.artion.io/image/";
+const storage_url = process.env.STORAGE_URL;
+  // ? "https://storage.testnet.artion.io/image/"
+  // : "https://storage.artion.io/image/";
 
 const getNFTThumbnailPath = async (nft, tokenID) => {
   try {

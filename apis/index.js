@@ -26,4 +26,6 @@ router.use("/mail", require("./mail"));
 router.use("/unlockable", require("./unlockable"));
 router.use("/transfer", require("./transfertracker"));
 router.use("/thumbnails", require("./thumbnails"));
+router.use("/image", require("./image"));
+
 module.exports = router;

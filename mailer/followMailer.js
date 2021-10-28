@@ -5,9 +5,9 @@ const mailingListEmail = "noreply-artion@fantom.foundation";
 const messageUtils = require("./message.utils");
 
 const app_url = process.env.APP_URL;
-const storage_url = process.env.RUNTIME
-  ? "https://storage.testnet.artion.io/image/"
-  : "https://storage.artion.io/image/";
+const storage_url = process.env.STORAGE_URL;
+  // ? "https://storage.testnet.artion.io/image/"
+  // : "https://storage.artion.io/image/";
 
 const mongoose = require("mongoose");
 const toLowerCase = require("../utils/utils");
